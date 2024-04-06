@@ -19,8 +19,11 @@ function App() {
 
   return (
     <>
-      <UserList users={users}/>
-      <UserForm />
+      <h1 style={{marginTop: '55px'}}>Vælg destination</h1>
+      <div id="kort"></div>
+      <h1 style={{marginTop: '26px'}}>Eller</h1>
+      <input type='text' placeholder='Indtast destination' style={{marginTop: '22px'}}></input>
+      <button id="blaff-btn" disabled>Blaff</button>
     </>
   )
 }
