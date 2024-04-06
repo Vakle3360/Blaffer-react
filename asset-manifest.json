@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Blaffer-react/static/css/main.1a917463.css",
+    "main.js": "/Blaffer-react/static/js/main.a529f24e.js",
+    "static/js/453.419a5d54.chunk.js": "/Blaffer-react/static/js/453.419a5d54.chunk.js",
+    "index.html": "/Blaffer-react/index.html",
+    "main.1a917463.css.map": "/Blaffer-react/static/css/main.1a917463.css.map",
+    "main.a529f24e.js.map": "/Blaffer-react/static/js/main.a529f24e.js.map",
+    "453.419a5d54.chunk.js.map": "/Blaffer-react/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a917463.css",
+    "static/js/main.a529f24e.js"
+  ]
+}
