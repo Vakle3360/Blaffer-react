@@ -18,7 +18,7 @@ const UserForm = ({}) => {
             email,
             adgangskode
         };
-        const url = "http://127.0.0.1:5000/api/user";
+        const url = "https://blaffer-flask.onrender.com/api/user";
         const options = {
             method: "POST",
             headers: {
