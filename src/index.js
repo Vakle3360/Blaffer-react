@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter basename='/Blaffer-react'>
     <Routes>
-      <Route path="/" element={ <App /> }/>
+      <Route path="/Blaffer-react" element={ <App /> }/>
       <Route path="/log-ind" element={ <Login /> }/>
     </Routes>
   </BrowserRouter>
