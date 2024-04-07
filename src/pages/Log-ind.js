@@ -22,6 +22,7 @@ function Login() {
           let user = users[i][0]
           try{
               if (user.email === email_ && user.password === password_){
+                alert(user.id);
                 document.cookie = user.id;
               }
           }
