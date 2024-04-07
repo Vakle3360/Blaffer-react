@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 //import UserList from './UserList';
 import './index.css';
 //import UserForm from './UserForm';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Log-ind';
 
