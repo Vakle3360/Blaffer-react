@@ -21,17 +21,20 @@ function App() {
   }
 //#endregion
 
-  return (
-    <>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/log-ind' element={<Login/>}/>
-        {/*
-        <Route path='/opret-bruger' element={<Opret/>}/>
-        */}
-      </Routes>
-    </>
-  )
+  if(window.location.search == "?log-ind"){
+    return (
+      <>
+        <Login/>
+      </>
+    )
+  }
+  else{
+    return (
+      <>
+        <Home/>
+      </>
+    )
+  }
 }
 
 export default App

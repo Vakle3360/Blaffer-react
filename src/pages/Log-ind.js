@@ -47,7 +47,7 @@ function Login() {
         <button onClick={() => {logind(document.getElementById("email").value, document.getElementById("pass").value)}}>Log Ind</button>
       </div>
       <p style={{display: "inline", marginLeft: "70px", position: "relative", top: "28px", fontSize: "15px"}}>Har du ikke en konto? 
-        <p style={{display: "inline", fontWeight: "700", color: "#EB1615"}} onClick={() => {window.location.href="/opret-bruger"}}> Opret dig</p>
+        <p style={{display: "inline", fontWeight: "700", color: "#EB1615"}} onClick={() => {window.location.search = "?opret-bruger"}}> Opret dig</p>
       </p>
     </>
   )
