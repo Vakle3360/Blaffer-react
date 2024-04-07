@@ -28,6 +28,11 @@ function Home() {
   }
 //#endregion
 
+  if (isNaN(document.cookie)) {
+    window.location.search = "?log-ind"
+  }
+
+
   return (
     <>
       <h1 style={{marginTop: '55px'}}>Vælg destination</h1>

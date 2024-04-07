@@ -72,6 +72,7 @@ input{
     background-color: var(--secondary);
 }
 
+/*#region Log ind*/
 #login-box{
     width: 262px;
     height: 336px;
@@ -111,6 +112,73 @@ input{
 }
 
 #login-box button{
+    width: 200px;
+    height: 45px;
+    background-color: var(--primary);
+    color: var(--bg);
+    border-radius: 23px;
+    border: none;
+    font-size: 18px;
+    font-weight: var(--bold);
+    text-align: center;
+    margin-top: 28px;
+    margin-left: 31px;
+}
+/*#endregion*/
+
+#opret-box{
+    width: 262px;
+    height: 413px;
+    margin-top: 109px;
+    margin-left: 56.5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+    border-radius: 10px;
+    padding: 0;
+    padding-top: 21px;
+}
+
+#opret-box h1{
+    font-weight: var(--bold);
+    font-size: 25px;
+    margin-top: 0;
+    margin-left: 31px;
+    text-align: left;
+}
+
+#opret-box input{
+    width: 200px;
+    height: 45px;
+    margin-left: 31px;
+    margin-top: 20px;
+}
+
+#same_box{
+    display: inline;
+    white-space: nowrap;
+}
+
+#opret-box #enavn{
+    width: 120px;
+}
+
+#opret-box #alder{
+    width: 72px;
+    margin-left: 3.9px;
+}
+
+#opret-box p{
+    font-weight: var(--bold);
+    color: var(--primary);
+}
+
+#vis {
+    font-size: 13px;
+    position: relative;
+    top: -30px;
+    left: 210px;
+}
+
+#opret-box button{
     width: 200px;
     height: 45px;
     background-color: var(--primary);

@@ -5,6 +5,7 @@ import './index.css';
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Log-ind';
+import Opret from './pages/Opret-bruger';
 
 function App() {
 //#region DB  
@@ -25,6 +26,12 @@ function App() {
     return (
       <>
         <Login/>
+      </>
+    )
+  } else if (window.location.search == "?opret-bruger"){
+    return(
+      <>
+        <Opret/>
       </>
     )
   }
