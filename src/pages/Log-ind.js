@@ -22,7 +22,7 @@ function Login() {
           let user = users[i][0]
           try{
               if (user.email === email_ && user.password === password_){
-                return (user.id);
+                document.cookie = user.id;
               }
           }
           catch (e){}
@@ -32,7 +32,7 @@ function Login() {
   }
 
   const logind = (email, password) => {
-    document.cookie = checkForUser(email, password)
+    checkForUser(email, password);
     if (document.cookie){
       window.location.search = "";
     }
