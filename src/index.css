@@ -71,3 +71,55 @@ input{
 #blaff-btn:disabled{
     background-color: var(--secondary);
 }
+
+#login-box{
+    width: 262px;
+    height: 336px;
+    margin-top: 109px;
+    margin-left: 56.5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+    border-radius: 10px;
+    padding: 0;
+    padding-top: 21px;
+}
+
+#login-box h1{
+    font-weight: var(--bold);
+    font-size: 25px;
+    margin-top: 0;
+    margin-left: 31px;
+    text-align: left;
+}
+
+#login-box input{
+    width: 200px;
+    height: 45px;
+    margin-left: 31px;
+    margin-top: 20px;
+}
+
+#login-box p{
+    font-weight: var(--bold);
+    color: var(--primary);
+}
+
+#vis {
+    font-size: 13px;
+    position: relative;
+    top: -30px;
+    left: 210px;
+}
+
+#login-box button{
+    width: 200px;
+    height: 45px;
+    background-color: var(--primary);
+    color: var(--bg);
+    border-radius: 23px;
+    border: none;
+    font-size: 18px;
+    font-weight: var(--bold);
+    text-align: center;
+    margin-top: 28px;
+    margin-left: 31px;
+}
