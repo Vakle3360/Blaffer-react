@@ -44,7 +44,7 @@ function Login() {
         <h1>Log Ind</h1>
         <input type='text' placeholder='Email' id="email"/>
         <input type='password' placeholder='Adgangskode' id="pass"/>
-        <p id="vis">vis</p>
+        <p id="vis" onClick={() => {var x = document.getElementById("pass"); var q = document.getElementById("vis"); if (x.type === "password"){x.type = "text"; q.innerHTML = "skjul";} else {x.type = "password";q.innerHTML = "vis";}}}>vis</p>
         <p style={{fontSize: "14px", marginLeft: "31px", marginTop: "28px"}}>Glemt adgangskode?</p>
         <button onClick={() => {logind(document.getElementById("email").value, document.getElementById("pass").value)}}>Log Ind</button>
       </div>
