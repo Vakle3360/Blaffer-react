@@ -1,5 +1,6 @@
 //import UserList from './UserList';
 import './index.css';
+import Blaff from './pages/Blaff';
 //import UserForm from './UserForm';
 import Home from './pages/Home';
 import Login from './pages/Log-ind';
@@ -20,7 +21,11 @@ function App() {
       </>
     )
   } else if (window.location.search === "?blaff"){
-
+    return(
+      <>
+        <Blaff/>
+      </>
+    )
   }
   else{
     return (
