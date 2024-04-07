@@ -3,13 +3,12 @@ import kort from '../img/kort.png';
 
 function Home() {
 //#region kort
-  let x = document.getElementById("dest");
 
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-     x.value = ("Geolocation is not supported by this browser.");
+      document.getElementById("dest").value = ("Geolocation is not supported by this browser.");
     }
   }
 
@@ -28,7 +27,7 @@ function Home() {
   const onLocation = () => {
     let a_ = false;
     try {
-      if(x.value == ""){
+      if(document.getElementById("dest").value == ""){
         a_ = true;
       }
     } catch (error) {}
@@ -41,8 +40,8 @@ function Home() {
     if (!window.localStorage.getItem("id") || isNaN(window.localStorage.getItem("id"))) {
       window.location.search = "?log-ind"
     }
+    console.log("gah")
   }
-
 
   return (
     <>
@@ -52,7 +51,7 @@ function Home() {
       </div>
       <h1 style={{marginTop: '26px'}}>Eller</h1>
       <input id="dest" type='text' placeholder='Indtast lokation' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
-      <button id="blaff-btn" disabled onClick={() => {window.location.search = "?blaff"}} onLoad={checkForLog()}>Blaff</button>
+      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} onLoad={() => {checkForLog();}}>Blaff</button>
     </>
   )
 }
