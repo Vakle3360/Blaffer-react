@@ -3,7 +3,7 @@ import kort from '../img/kort.png';
 
 function Home() {
 //#region kort
-  const x = document.getElementById("dest");
+  let x = document.getElementById("dest");
 
   const getLocation = () => {
     if (navigator.geolocation) {
@@ -21,9 +21,12 @@ function Home() {
 
   const onLocation = () => {
     let a_ = false;
-    if(x.value === ""){
-      a_ = true;
-    }
+    try {
+      if(x.value === ""){
+        a_ = true;
+      }
+    } catch (error) {}
+    
     document.getElementById("blaff-btn").disabled = a_;
   }
 //#endregion
@@ -32,18 +35,19 @@ function Home() {
     if (isNaN(document.cookie)) {
       window.location.search = "?log-ind"
     }
+    
   }
 
 
   return (
     <>
-      <h1 style={{marginTop: '55px'}} onLoad={() => {checkForLog()}}>Vælg destination</h1>
+      <h1 style={{marginTop: '55px'}}>Vælg lokation</h1>
       <div id="kort" onClick={() => {getLocation()}}>
         <img src={kort} style={{width: "180px", marginLeft: "51px", marginTop: "22px"}} alt=''/>
       </div>
       <h1 style={{marginTop: '26px'}}>Eller</h1>
-      <input id="dest" type='text' placeholder='Indtast destination' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
-      <button id="blaff-btn" disabled>Blaff</button>
+      <input id="dest" type='text' placeholder='Indtast lokation' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
+      <button type="submit" id="blaff-btn" onClick={() => {window.location.search = "?blaff"}} onLoad={checkForLog()}>Blaff</button>
     </>
   )
 }
