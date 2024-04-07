@@ -28,14 +28,16 @@ function Home() {
   }
 //#endregion
 
-  if (isNaN(document.cookie)) {
-    window.location.search = "?log-ind"
+  const checkForLog = () => {
+    if (isNaN(document.cookie)) {
+      window.location.search = "?log-ind"
+    }
   }
 
 
   return (
     <>
-      <h1 style={{marginTop: '55px'}}>Vælg destination</h1>
+      <h1 style={{marginTop: '55px'}} onLoad={() => {checkForLog()}}>Vælg destination</h1>
       <div id="kort" onClick={() => {getLocation()}}>
         <img src={kort} style={{width: "180px", marginLeft: "51px", marginTop: "22px"}} alt=''/>
       </div>
