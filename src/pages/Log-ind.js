@@ -34,8 +34,8 @@ function Login() {
   }
 
   const logind = (email, password) => {
-    document.cookie = String(checkForUser(email, password)) - "=";
-    alert(document.cookie);
+    window.localStorage.setItem("id", checkForUser(email, password));
+    alert(window.localStorage.getItem("id"));
     if (!isNaN(document.cookie)){
       window.location.search = "";
     }
