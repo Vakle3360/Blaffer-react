@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Blaffer-react/static/css/main.977e86f5.css",
-    "main.js": "/Blaffer-react/static/js/main.e3b4789e.js",
+    "main.css": "/Blaffer-react/static/css/main.1be97d9a.css",
+    "main.js": "/Blaffer-react/static/js/main.2ec79c59.js",
     "static/js/453.419a5d54.chunk.js": "/Blaffer-react/static/js/453.419a5d54.chunk.js",
     "static/media/kort.png": "/Blaffer-react/static/media/kort.147bff7418b5eb2e5c9c.png",
     "index.html": "/Blaffer-react/index.html",
-    "main.977e86f5.css.map": "/Blaffer-react/static/css/main.977e86f5.css.map",
-    "main.e3b4789e.js.map": "/Blaffer-react/static/js/main.e3b4789e.js.map",
+    "main.1be97d9a.css.map": "/Blaffer-react/static/css/main.1be97d9a.css.map",
+    "main.2ec79c59.js.map": "/Blaffer-react/static/js/main.2ec79c59.js.map",
     "453.419a5d54.chunk.js.map": "/Blaffer-react/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.977e86f5.css",
-    "static/js/main.e3b4789e.js"
+    "static/css/main.1be97d9a.css",
+    "static/js/main.2ec79c59.js"
   ]
 }
