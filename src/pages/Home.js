@@ -1,9 +1,9 @@
 import '../index.css';
 import kort from '../img/kort.png'; 
+import React, { useState } from 'react';
 
 function Home() {
 //#region kort
-
   const getLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition);
@@ -32,16 +32,27 @@ function Home() {
       }
     } catch (error) {}
     
-    document.getElementById("blaff-btn").disabled = a_;
+    enableButton();
   }
 //#endregion
 
-  const checkForLog = () => {
+
+
+
+  const [isButtonDisabled, setButtonDisabled] = useState(true);
+ 
+    const disableButton = () => {
+        setButtonDisabled(true);
+    };
+ 
+    const enableButton = () => {
+        setButtonDisabled(false);
+    };
+
+
     if (!window.localStorage.getItem("id") || isNaN(window.localStorage.getItem("id"))) {
       window.location.search = "?log-ind"
     }
-    console.log("gah")
-  }
 
   return (
     <>
@@ -51,7 +62,7 @@ function Home() {
       </div>
       <h1 style={{marginTop: '26px'}}>Eller</h1>
       <input id="dest" type='text' placeholder='Indtast lokation' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
-      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} onLoad={() => {checkForLog();}}>Blaff</button>
+      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} disabled={isButtonDisabled}>Blaff</button>
     </>
   )
 }
