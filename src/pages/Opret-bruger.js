@@ -46,7 +46,6 @@ function Opret() {
 
   const logind = (email, password) => {
     window.localStorage.setItem("id", checkForUser(email, password));
-    alert();
     if (!isNaN(window.localStorage.getItem("id"))){
       window.location.search = "";
     }
