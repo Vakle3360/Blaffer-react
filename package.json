@@ -2,7 +2,7 @@
   "homepage": "http://vakle3360.github.io/Blaffer-react",
   "name": "client",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "proxy": "https://blaffer-flask.onrender.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

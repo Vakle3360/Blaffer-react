@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 //import UserList from './UserList';
 import './index.css';
 //import UserForm from './UserForm';
-import {Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Log-ind';
 
@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/Blaffer-react' element={<Home/>}/>
         <Route path='/log-ind' element={<Login/>}/>
         {/*
         <Route path='/opret-bruger' element={<Opret/>}/>
