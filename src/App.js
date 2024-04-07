@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/Blaffer-react' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/log-ind' element={<Login/>}/>
         {/*
         <Route path='/opret-bruger' element={<Opret/>}/>
