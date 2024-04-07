@@ -18,16 +18,18 @@ function Login() {
 
   const checkForUser = (email_, password_) => {
     if (email_ && password_){
+      let a = false;
       for (let i = 0; i < users.length; i++){
           let user = users[i][0]
           try{
               if (user.email === email_ && user.password === password_){
                 return (user.id);
+                a = true;
               }
           }
           catch (e){}
       }
-      alert("Forkert email eller adgangskode")
+      if (!a) {alert("Forkert email eller adgangskode")}
     } else {alert("Indtast både email og adgangskode")}
   }
 
