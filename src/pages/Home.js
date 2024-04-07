@@ -46,7 +46,7 @@ function Home() {
       </div>
       <h1 style={{marginTop: '26px'}}>Eller</h1>
       <input id="dest" type='text' placeholder='Indtast lokation' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
-      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff"}} onLoad={checkForLog()}>Blaff</button>
+      <button id="blaff-btn" disabled onClick={() => {window.location.search = "?blaff"}} onLoad={checkForLog()}>Blaff</button>
     </>
   )
 }

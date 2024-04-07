@@ -41,8 +41,7 @@ function Opret() {
           }
           catch (e){}
       }
-      alert("Forkert email eller adgangskode")
-    } else {alert("Indtast både email og adgangskode")}
+    }
   }
 
   const logind = (email, password) => {
