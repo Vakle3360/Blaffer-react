@@ -14,15 +14,21 @@ function Home() {
   }
 
   const showPosition = (position) => {
-    x.value = position.coords.latitude +
-    ", " + position.coords.longitude;
-    onLocation();
+    try {
+      document.getElementById("dest").value = position.coords.latitude + ", " + position.coords.longitude;
+      onLocation();
+    } catch (error) {
+      document.getElementById("dest").value = "ERROR";
+      onLocation();
+    }
+    
+    
   }
 
   const onLocation = () => {
     let a_ = false;
     try {
-      if(x.value === ""){
+      if(x.value == ""){
         a_ = true;
       }
     } catch (error) {}
