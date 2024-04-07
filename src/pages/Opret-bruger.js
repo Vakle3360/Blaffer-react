@@ -45,8 +45,9 @@ function Opret() {
   }
 
   const logind = (email, password) => {
-    document.cookie = checkForUser(email, password)
-    if (!isNaN(document.cookie)){
+    window.localStorage.setItem("id", checkForUser(email, password));
+    alert();
+    if (!isNaN(window.localStorage.getItem("id"))){
       window.location.search = "";
     }
   }

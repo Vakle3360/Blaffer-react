@@ -32,7 +32,7 @@ function Home() {
 //#endregion
 
   const checkForLog = () => {
-    if (!document.cookie || isNaN(document.cookie)) {
+    if (!window.localStorage.getItem("id") || isNaN(window.localStorage.getItem("id"))) {
       window.location.search = "?log-ind"
     }
   }

@@ -35,8 +35,8 @@ function Login() {
 
   const logind = (email, password) => {
     window.localStorage.setItem("id", checkForUser(email, password));
-    alert(window.localStorage.getItem("id"));
-    if (!isNaN(document.cookie)){
+    alert();
+    if (!isNaN(window.localStorage.getItem("id"))){
       window.location.search = "";
     }
   }
