@@ -19,6 +19,7 @@
     color: var(--text);
     font-family: "Poppins", sans-serif;
     font-weight: var(--regular);
+    overflow: hidden;
 }
 
 body{
@@ -190,4 +191,82 @@ input{
     text-align: center;
     margin-top: 28px;
     margin-left: 31px;
+}
+
+.driver{
+    width: 282px;
+    height: 88px;
+    border-radius: 30px;
+    background-color: white;
+    padding-top: 18px;
+    margin-left: 47px;
+    margin-bottom: 25px;
+}
+
+.driver .pfp{
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 35px;
+    background-color: var(--secondary);
+    margin-left: 15px;
+}
+
+.driver .name{
+    font-size: 20px;
+    font-weight: var(--regular);
+    text-align: left;
+    position: relative;
+    top: -70px;
+    margin-left: 99.5px;
+    z-index: 1;
+}
+
+.driver .afstand{
+    font-size: 20px;
+    font-weight: var(--regular);
+    color: #707070;
+    text-align: left;
+    position: relative;
+    top: -65px;
+    margin-left: 99.5px;
+}
+
+.driver button{
+    width: 82px;
+    height: 35px;
+    border-radius: 18px;
+    background-color: var(--primary);
+    color: var(--bg);
+    font-size: 20px;
+    font-weight: var(--regular);
+    border: none;
+    position: relative;
+    top: -100px;
+    margin-left: 180px;
+}
+
+#stop{
+    position: absolute;
+    bottom: 26px; 
+    left: 65.5px; 
+    width: 242px;
+    height: 54.45px;
+    background-color: var(--primary);
+    color: var(--bg);
+    border-radius: 23px;
+    font-size: 21px;
+    font-weight: var(--bold);
+    border: none;
+    z-index: 2;
+}
+
+#q{
+    height: 722px;
+    overflow: scroll;
+}
+
+#profile #display{
+    width: 282px;
+    height: 664px;
+    border-radius: 30px;
 }
