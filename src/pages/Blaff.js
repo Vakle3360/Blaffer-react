@@ -125,7 +125,9 @@ function Blaff() {
         try {
           let link = "https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude;
           navigator.clipboard.writeText(link);
-          alert("Lokationen er sendt og kopiret i udklipsholderen!")
+          navigator.clipboard.writeText(link);
+          navigator.clipboard.writeText(link);
+          alert("Lokationen er sendt og kopiret i udklipsholderen!");
         } catch (error) {
           alert("Fejl: kunne ikke finde lokation");
         }    
