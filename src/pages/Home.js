@@ -19,9 +19,7 @@ function Home() {
     } catch (error) {
       document.getElementById("dest").value = "ERROR";
       onLocation();
-    }
-    
-    
+    }    
   }
 
   const onLocation = () => {

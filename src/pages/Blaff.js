@@ -115,6 +115,22 @@ function Blaff() {
         setAge(r_age);
     }
 
+    const getLocation = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+    }
+
+    const showPosition = (position) => {
+        try {
+          let link = "https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude;
+          navigator.clipboard.writeText(link);
+          alert("Lokationen er sendt og kopiret i udklipsholderen!")
+        } catch (error) {
+          alert("Fejl: kunne ikke finde lokation");
+        }    
+      }
+
     return (
         <>
             <div id="væk">
@@ -139,8 +155,8 @@ function Blaff() {
                     <p id="about">Om mig</p>
                     <p style={{marginLeft: "32px", width: "218px", color: "#707070"}}>Der er intet om denne chaufør</p>
                 </div>
-                <button onClick={() => {window.location.search = "";}}>Tilbage</button>
-                <button>Vælg</button>
+                <button id="tb" className='a' onClick={() => {window.location.search = "";}}>Tilbage</button>
+                <button id="vælg" className='a' onClick={() => {getLocation()}}>Vælg</button>
             </div>
         </>
     )

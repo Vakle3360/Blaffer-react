@@ -312,3 +312,26 @@ input{
     margin-left: 32px;
     margin-top: 20.5px;
 }
+
+.a{
+    width: 163.53px;
+    height: 54.45px;
+    border-radius: 23px;
+    font-size: 21px;
+    font-weight: var(--bold);
+    color: var(--bg);
+    border: none;
+    position: absolute;
+    bottom: 26px;
+    z-index: 40;
+}
+
+#tb{
+    background-color: var(--secondary);
+    left: 14.3px;
+}
+
+#vælg{
+    background-color: var(--primary);
+    right: 14.3px;
+}
