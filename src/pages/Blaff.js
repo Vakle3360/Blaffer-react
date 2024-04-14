@@ -164,7 +164,7 @@ function Blaff() {
                 <button id="tb" className='a' onClick={() => {window.location.search = "";}}>Tilbage</button>
                 <button id="vælg" className='a' onClick={() => {getLocation()}}>Vælg</button>
             </div>
-            <input id="link" value={link} style={{height: "0", border: "none"}}></input>
+            <input id="link" value={link} style={{boxShadow: "none"}}></input>
         </>
     )
 
