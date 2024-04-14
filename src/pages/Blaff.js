@@ -123,10 +123,7 @@ function Blaff() {
 
     const showPosition = (position) => {
         try {
-          let link = "https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude;
-          navigator.clipboard.writeText(link);
-          navigator.clipboard.writeText(link);
-          navigator.clipboard.writeText(link);
+          navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
           alert("Lokationen er sendt og kopiret i udklipsholderen!");
         } catch (error) {
           alert("Fejl: kunne ikke finde lokation");
