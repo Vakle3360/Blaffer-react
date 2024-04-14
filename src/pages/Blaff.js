@@ -8,6 +8,7 @@ function Blaff() {
     const [age, setAge] = useState("0");
     const [distance, setDist] = useState("0");
     const [rating, setRating] = useState("0");
+    const [link, setLink] = useState("");
 
     const items = [];
 
@@ -113,6 +114,12 @@ function Blaff() {
         setAge(r_age);
     }
 
+    const copy = (id) => {
+        let input = document.getElementById(id);
+        input.select();
+        document.execCommand("copy");
+    }
+
     const getLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
@@ -121,13 +128,11 @@ function Blaff() {
 
     const showPosition = (position) => {
         try {
-            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
-            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
-            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
-            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
-          navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
+            setLink("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
+            copy("link");
           alert("Lokationen er sendt og kopiret i udklipsholderen!");
         } catch (error) {
+            console.log(error)
           alert("Fejl: kunne ikke finde lokation");
         }    
       }
@@ -159,6 +164,7 @@ function Blaff() {
                 <button id="tb" className='a' onClick={() => {window.location.search = "";}}>Tilbage</button>
                 <button id="vælg" className='a' onClick={() => {getLocation()}}>Vælg</button>
             </div>
+            <input id="link" value={link} style={{height: "0", border: "none"}}></input>
         </>
     )
 
