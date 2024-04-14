@@ -1,5 +1,4 @@
 import Chaufør from '../components/chaufør';
-import ChauførProf from '../components/chaufør-profil';
 import '../index.css';
 import React, {useState} from 'react'
 
@@ -11,7 +10,6 @@ function Blaff() {
     const [rating, setRating] = useState("0");
 
     const items = [];
-    const items__ = [];
 
     let randomNumber = Math.floor(Math.random() * 9) + 1
 
@@ -27,7 +25,7 @@ function Blaff() {
         "Alma",
         "Ella",
         "Agnes",
-        "Clare",
+        "Clara",
         "Louise",
         "Asta",
         "Josefine",
@@ -123,6 +121,10 @@ function Blaff() {
 
     const showPosition = (position) => {
         try {
+            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
+            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
+            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
+            navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
           navigator.clipboard.writeText("https://www.google.com/maps/dir//" + position.coords.latitude + "," + position.coords.longitude);
           alert("Lokationen er sendt og kopiret i udklipsholderen!");
         } catch (error) {
