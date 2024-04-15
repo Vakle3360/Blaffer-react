@@ -80,7 +80,7 @@ function Blaff() {
     let l_afstande = [];
 
     const r_afstand = (key) => {
-        let afstand = Math.floor(Math.random() * 9)+ "." + Math.floor(Math.random() * 9);
+        let afstand = (Math.floor(Math.random() * 2) + 1) * key;
         l_afstande.push([{
             "id": key,
             "afstand": afstand
@@ -153,7 +153,7 @@ function Blaff() {
             <div id="profile" style={{visibility: "hidden"}}>
                 <div id="display">
                     <div id="img"></div>
-                    <p id="afstand">{distance}km</p>
+                    <p id="afstand">{distance}min</p>
                     <h2 id="name">{name}</h2>
                     <p id="age">{age} år</p>
                     <br/>

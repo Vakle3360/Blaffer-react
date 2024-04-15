@@ -25,7 +25,7 @@ function Home() {
   const onLocation = () => {
     let a_ = false;
     try {
-      if(document.getElementById("dest").value == ""){
+      if(document.getElementById("dest").value === ""){
         a_ = true;
       }
     } catch (error) {}
@@ -60,6 +60,10 @@ function Home() {
       </div>
       <h1 style={{marginTop: '26px'}}>Eller</h1>
       <input id="dest" type='text' placeholder='Indtast lokation' style={{marginTop: '22px'}} onInput={() => {onLocation()}}></input>
+      <h1 style={{marginTop: '26px'}}>Vælg destination</h1>
+      <input type='text' placeholder='Indtast desitnation' style={{marginTop: '22px'}}></input>
+      <br/>
+      <br/>
       <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} disabled={isButtonDisabled}>Blaff</button>
     </>
   )

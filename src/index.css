@@ -65,8 +65,9 @@ input{
     font-weight: var(--bold);
     font-size: 21px;
     color: var(--bg);
-    margin-left: 66.5px;
-    margin-top: 194.5px
+    position: absolute;
+    left: 66.5px;
+    bottom: 25px;
 }
 
 #blaff-btn:disabled{

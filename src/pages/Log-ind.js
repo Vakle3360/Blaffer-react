@@ -23,8 +23,8 @@ function Login() {
           let user = users[i][0]
           try{
               if (user.email === email_ && user.password === password_){
-                return (user.id);
                 a = true;
+                return (user.id);
               }
           }
           catch (e){}
@@ -50,9 +50,9 @@ function Login() {
         <p style={{fontSize: "14px", marginLeft: "31px", marginTop: "28px"}}>Glemt adgangskode?</p>
         <button onClick={() => {logind(document.getElementById("email").value, document.getElementById("pass").value)}}>Log Ind</button>
       </div>
-      <p style={{display: "inline", marginLeft: "70px", position: "relative", top: "28px", fontSize: "15px"}}>Har du ikke en konto? 
-        <p style={{display: "inline", fontWeight: "700", color: "#EB1615"}} onClick={() => {window.location.search = "?opret-bruger"}}> Opret dig</p>
-      </p>
+      <br/>
+      <p style={{position: "absolute", top: "493px", left: "75px", fontSize: "15px", color: "#140707" }}>Har du ikke en konto?</p>
+      <p style={{fontWeight: "700", color: "#EB1615", position: "absolute", top: "493px", right: "75px"}} onClick={() => {window.location.search = "?opret-bruger"}}> Opret dig</p>
     </>
   )
 }
