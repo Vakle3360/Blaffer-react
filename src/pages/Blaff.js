@@ -54,7 +54,7 @@ function Blaff() {
     return (
         <>
             <div id="væk">
-                <h1 style={{marginTop: "55px", fontWeight: "500", marginBottom: "22px"}}>Blaff</h1>
+                <h1 style={{marginTop: "55px", fontWeight: "500", marginBottom: "22px"}}>Blaf</h1>
                 <div id="q">
                     <div>
                         <Chaufør name="Valdemar Jensen" afstand="2" color="#EB1615"onclick={() =>{choose("Valdemar Jensen", 2)}}/>

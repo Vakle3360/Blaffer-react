@@ -64,7 +64,7 @@ function Home() {
       <input type='text' placeholder='Indtast desitnation' style={{marginTop: '22px'}}></input>
       <br/>
       <br/>
-      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} disabled={isButtonDisabled}>Blaff</button>
+      <button id="blaff-btn" onClick={() => {window.location.search = "?blaff";}} disabled={isButtonDisabled}>Blaf</button>
     </>
   )
 }
