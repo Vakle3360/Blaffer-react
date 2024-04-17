@@ -59,7 +59,7 @@ function Blaff() {
                     <div>
                         <Chaufør name="Valdemar Jensen" afstand="2" color="#EB1615"onclick={() =>{choose("Valdemar Jensen", 2)}}/>
                         <Chaufør name="Oluf Nielsen" afstand="4" color="#EB1615" onclick={() =>{choose("Oluf Nielsen", 4)}}/>
-                        <Chaufør name="Martin Lykkebo" afstand="4" color="#1FEB15" onclick={() =>{choose("Martin Olsen", 4)}}/>
+                        <Chaufør name="Martin Lykkebo" afstand="4" color="#1FEB15" onclick={() =>{choose("Martin Lykkebo", 4)}}/>
                         <Chaufør name="Ingid Andersen" afstand="5" color="#EB1615" onclick={() =>{choose("Ingid Andersen", 5)}}/>
                         <Chaufør name="Agnes Buch" afstand="5" color="#1FEB15" onclick={() =>{choose("Agnes Buch", 5)}}/>
                         <Chaufør name="Noah Rasmussen" afstand="5" color="#1FEB15" onclick={() =>{choose("Noah Rasmussen", 5)}}/>
