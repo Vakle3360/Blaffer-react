@@ -10,94 +10,8 @@ function Blaff() {
     const [rating, setRating] = useState("0");
     const [link, setLink] = useState("");
 
-    const items = [];
-
-    let randomNumber = Math.floor(Math.random() * 9) + 1
-
-    if (!items.length > 0){
-        for (var i = 0;i < randomNumber; i++){
-            items.push(<Chaufør key={i} name="navn" afstand="0"/>)
-        }
-    }
-
-    let navne = [
-        "Frida",
-        "Olivia",
-        "Alma",
-        "Ella",
-        "Agnes",
-        "Clara",
-        "Louise",
-        "Asta",
-        "Josefine",
-        "Mathilde",
-        "Valdemar",
-        "Alexander",
-        "Noah",
-        "Tobias",
-        "Nikolai",
-        "Oliver",
-        "Emil",
-        "Gustav",
-        "Martin",
-        "Mikkel"
-    ]
-
-    let efternavne = [
-        "Nielsen",
-        "Jensen",
-        "Hansen",
-        "Pedersen",
-        "Larsen",
-        "Andersen",
-        "Sørensen",
-        "Rasmussen",
-        "Berg",
-        "Bang",
-        "Buch",
-        "Carlsen"
-    ]
-
-    let l_navne = [];
-
-    const r_navn = (key) => {
-        let navn = navne[Math.floor(Math.random() * navne.length)] + " " + efternavne[Math.floor(Math.random() * efternavne.length)];
-        l_navne.push([{
-            "id": key,
-            "navn": navn
-        }]);
-        return navn;
-    }
-
-    const g_navn = (key) => {
-        for(let az = 0; az < l_navne.length; az++){
-            if (l_navne[az][0]["id"] === key){
-                return (l_navne[az][0]["navn"]);
-            };
-        };
-    };
-
-    let l_afstande = [];
-
-    const r_afstand = (key) => {
-        let afstand = (Math.floor(Math.random() * 2) + 1) * key;
-        l_afstande.push([{
-            "id": key,
-            "afstand": afstand
-        }]);
-        return afstand
-    }
-
-    const g_afstand = (key) => {
-        for(let az = 0; az < l_afstande.length; az++){
-            if (l_afstande[az][0]["id"] === key){
-                return (l_afstande[az][0]["afstand"]);
-            };
-        };
-    };
-
     const r_rating = () => {
-        return Math.floor(Math.random() * 4)+ "." + Math.floor(Math.random() * 9)
+        return (Math.floor(Math.random() * 2) + 2)+ "." + Math.floor(Math.random() * 9)
     }
 
     const r_age = () => {
@@ -143,9 +57,15 @@ function Blaff() {
                 <h1 style={{marginTop: "55px", fontWeight: "500", marginBottom: "22px"}}>Blaff</h1>
                 <div id="q">
                     <div>
-                        {items.map((item) => (
-                            <Chaufør key={item.key} name={r_navn(item.key)} afstand={r_afstand(item.key)} onclick={() => {choose(g_navn(item.key), g_afstand(item.key))}} />
-                        ))}
+                        <Chaufør name="Valdemar Jensen" afstand="2" color="#EB1615"onclick={() =>{choose("Valdemar Jensen", 2)}}/>
+                        <Chaufør name="Oluf Nielsen" afstand="4" color="#EB1615" onclick={() =>{choose("Oluf Nielsen", 4)}}/>
+                        <Chaufør name="Martin Lykkebo" afstand="4" color="#1FEB15" onclick={() =>{choose("Martin Olsen", 4)}}/>
+                        <Chaufør name="Ingid Andersen" afstand="5" color="#EB1615" onclick={() =>{choose("Ingid Andersen", 5)}}/>
+                        <Chaufør name="Agnes Buch" afstand="5" color="#1FEB15" onclick={() =>{choose("Agnes Buch", 5)}}/>
+                        <Chaufør name="Noah Rasmussen" afstand="5" color="#1FEB15" onclick={() =>{choose("Noah Rasmussen", 5)}}/>
+                        <Chaufør name="Mikkel Carlsen" afstand="6" color="#1FEB15" onclick={() =>{choose("Mikkel Carlsen", 6)}}/>
+                        <Chaufør name="Ella Bang" afstand="8" color="#EB1615" onclick={() =>{choose("Ella Bang", 8)}}/>
+                        <br/>
                     </div>
                 </div>
                 <button id='stop' onClick={() => {window.location.search = "";}}>Stop</button>

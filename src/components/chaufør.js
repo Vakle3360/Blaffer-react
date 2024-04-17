@@ -8,7 +8,7 @@ function Chaufør (props){
                 <div className='pfp'></div>
                 <h1 className='name'>{props.name}</h1>
                 <h1 className='afstand'>{props.afstand} min</h1>
-                <button>Vælg</button>
+                <button style={{backgroundColor: props.color}}>Vælg</button>
             </div>
     )
 
