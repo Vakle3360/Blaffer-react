@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Blaffer-react/static/css/main.ab6b199b.css",
-    "main.js": "/Blaffer-react/static/js/main.41de9e78.js",
+    "main.css": "/Blaffer-react/static/css/main.2f7bc588.css",
+    "main.js": "/Blaffer-react/static/js/main.cbe1420d.js",
     "static/js/453.419a5d54.chunk.js": "/Blaffer-react/static/js/453.419a5d54.chunk.js",
+    "static/media/valdemar.png": "/Blaffer-react/static/media/valdemar.2fe11008a8d71fe3e401.png",
+    "static/media/martin.png": "/Blaffer-react/static/media/martin.8cd718445729a012250d.png",
+    "static/media/Emil.png": "/Blaffer-react/static/media/Emil.c494de973c3c6b9b3542.png",
+    "static/media/tøger.png": "/Blaffer-react/static/media/tøger.c076c6514993541389c9.png",
     "static/media/kort.png": "/Blaffer-react/static/media/kort.aedc3d740cecd498bea3.png",
     "index.html": "/Blaffer-react/index.html",
-    "main.ab6b199b.css.map": "/Blaffer-react/static/css/main.ab6b199b.css.map",
-    "main.41de9e78.js.map": "/Blaffer-react/static/js/main.41de9e78.js.map",
+    "main.2f7bc588.css.map": "/Blaffer-react/static/css/main.2f7bc588.css.map",
+    "main.cbe1420d.js.map": "/Blaffer-react/static/js/main.cbe1420d.js.map",
     "453.419a5d54.chunk.js.map": "/Blaffer-react/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ab6b199b.css",
-    "static/js/main.41de9e78.js"
+    "static/css/main.2f7bc588.css",
+    "static/js/main.cbe1420d.js"
   ]
 }
