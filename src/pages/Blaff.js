@@ -1,6 +1,10 @@
 import Chaufør from '../components/chaufør';
 import '../index.css';
 import React, {useState} from 'react'
+import tøger from '../img/pfp/tøger.png';
+import martin from '../img/pfp/martin.png';
+import emil from '../img/pfp/Emil.png';
+import valdemar from '../img/pfp/valdemar.png';
 
 function Blaff() {
     
@@ -9,6 +13,7 @@ function Blaff() {
     const [distance, setDist] = useState("0");
     const [rating, setRating] = useState("0");
     const [link, setLink] = useState("");
+    const [pfp, setPFP] = useState();
 
     const r_rating = () => {
         return (Math.floor(Math.random() * 2) + 2)+ "." + Math.floor(Math.random() * 9)
@@ -18,12 +23,15 @@ function Blaff() {
         return Math.floor((Math.random() * 30) + 18);
     }
 
-    const choose = (navn, afstand) => {
+    const choose = (navn, afstand,img) => {
         
         document.getElementById("væk").remove();
         document.getElementById("profile").style.visibility = "";
         setName(navn);
         setDist(afstand);
+        if (img !== undefined){
+            setPFP(img);
+        }
         setRating(r_rating);
         setAge(r_age);
     }
@@ -57,14 +65,13 @@ function Blaff() {
                 <h1 style={{marginTop: "55px", fontWeight: "500", marginBottom: "22px"}}>Blaf</h1>
                 <div id="q">
                     <div>
-                        <Chaufør name="Valdemar Jensen" afstand="2" color="#EB1615"onclick={() =>{choose("Valdemar Jensen", 2)}}/>
-                        <Chaufør name="Oluf Nielsen" afstand="4" color="#EB1615" onclick={() =>{choose("Oluf Nielsen", 4)}}/>
-                        <Chaufør name="Martin Lykkebo" afstand="4" color="#1FEB15" onclick={() =>{choose("Martin Lykkebo", 4)}}/>
-                        <Chaufør name="Ingid Andersen" afstand="5" color="#EB1615" onclick={() =>{choose("Ingid Andersen", 5)}}/>
-                        <Chaufør name="Agnes Buch" afstand="5" color="#1FEB15" onclick={() =>{choose("Agnes Buch", 5)}}/>
-                        <Chaufør name="Noah Rasmussen" afstand="5" color="#1FEB15" onclick={() =>{choose("Noah Rasmussen", 5)}}/>
-                        <Chaufør name="Mikkel Carlsen" afstand="6" color="#1FEB15" onclick={() =>{choose("Mikkel Carlsen", 6)}}/>
-                        <Chaufør name="Ella Bang" afstand="8" color="#EB1615" onclick={() =>{choose("Ella Bang", 8)}}/>
+                        <Chaufør img={tøger} name="Tøger Lyngbo" afstand="2" color="#EB1615"onclick={() =>{choose("Tøger Lyngbo", 2, tøger)}}/>
+                        <Chaufør img={martin} name="Martin Lykkebo" afstand="4" color="#1FEB15" onclick={() =>{choose("Martin Lykkebo", 4, martin)}}/>
+                        <Chaufør img={emil} name="Emil Johannesen" afstand="5" color="#EB1615" onclick={() =>{choose("Emil Johannesen", 5, emil)}}/>
+                        <Chaufør img={valdemar} name="Valdemar Neve" afstand="5" color="#1FEB15" onclick={() =>{choose("Valdemar Neve", 5, valdemar)}}/>
+                        <Chaufør name="Emil" afstand="5" color="#1FEB15" onclick={() =>{choose("Emil", 5)}}/>
+                        <Chaufør name="Patrick" afstand="6" color="#1FEB15" onclick={() =>{choose("Patrick", 6)}}/>
+                        <Chaufør name="Morten" afstand="8" color="#EB1615" onclick={() =>{choose("Morten", 8)}}/>
                         <br/>
                     </div>
                 </div>
@@ -72,7 +79,7 @@ function Blaff() {
             </div>
             <div id="profile" style={{visibility: "hidden"}}>
                 <div id="display">
-                    <div id="img"></div>
+                    <img id="img" src={pfp} alt=''></img>
                     <p id="afstand">{distance}min</p>
                     <h2 id="name">{name}</h2>
                     <p id="age">{age} år</p>
